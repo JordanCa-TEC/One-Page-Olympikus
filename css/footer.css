@@ -1,0 +1,211 @@
+body {
+  font-family: "Arial, sans-serif";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #0044cc;
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  header {
+    height: 10em;
+  }
+}
+header .logo {
+  width: 5%;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  header .logo {
+    width: 20%;
+    padding-bottom: 80px;
+  }
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+header nav .search-bar {
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  header nav .search-bar {
+    margin-top: 6rem;
+    width: 100%;
+    z-index: 999;
+  }
+}
+header nav .search-bar input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  padding-left: 20px;
+  margin-left: 1.2em;
+  border: none;
+}
+@media screen and (max-width: 768px) {
+  header nav .search-bar input {
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: -45%;
+    width: 130%;
+  }
+}
+header nav .search-bar .icon--search {
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  transform: translateY(-50%);
+  width: 10%;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  header nav .search-bar {
+    right: -15%;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0044cc;
+  }
+  header .menu li {
+    text-align: center;
+    padding: 1rem 0;
+  }
+  header .menu li a {
+    display: block;
+    width: 100%;
+  }
+  header .menu.active {
+    display: flex;
+  }
+  header .hamburger-menu {
+    display: block;
+    padding: 3% 6% 15% 3%;
+    border-radius: 30%;
+    cursor: pointer;
+  }
+  header .hamburger-menu .bar {
+    width: 30px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 5px 0;
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: #002244;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+footer .footer--menu-wrapper {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  footer .footer--menu-wrapper {
+    display: none;
+  }
+}
+footer .footer--menu-wrapper .footer--menu {
+  margin-left: 5em;
+}
+footer .footer--menu-wrapper .footer--menu h3 {
+  text-align: left;
+}
+footer .footer--menu-wrapper .footer--menu ul {
+  list-style: none;
+  text-align: left;
+}
+footer .footer--menu-wrapper .footer--menu ul li {
+  margin-bottom: 15px;
+}
+footer .footer--menu-wrapper .footer--menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+footer .footer--menu-wrapper .footer--menu ul li a:hover {
+  text-decoration: underline;
+}
+footer .footer--menu-wrapper-mobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  footer .footer--menu-wrapper-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+footer .footer--menu-wrapper-mobile .footer--menu {
+  width: 60%;
+  margin-bottom: 1rem;
+}
+footer .footer--menu-wrapper-mobile .footer--menu h3 {
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin: 0;
+}
+footer .footer--menu-wrapper-mobile .footer--menu h3 .toggle-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+footer .footer--menu-wrapper-mobile .footer--menu ul {
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+footer .footer--menu-wrapper-mobile .footer--menu ul li {
+  margin-bottom: 15px;
+  padding-top: 5%;
+}
+footer .footer--menu-wrapper-mobile .footer--menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+footer .footer--menu-wrapper-mobile .footer--menu ul li a:hover {
+  text-decoration: underline;
+}
+footer .footer--menu-wrapper-mobile .footer--menu.active ul {
+  display: block;
+}
+footer .footer--menu-wrapper-mobile .footer--menu.active .toggle-icon {
+  transform: rotate(45deg);
+}/*# sourceMappingURL=footer.css.map */

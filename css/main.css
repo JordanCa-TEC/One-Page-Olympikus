@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+main {
+  width: 80%;
+  margin: 0;
+  padding: 10vh 10% 10vh;
+}
+@media screen and (max-width: 768px) {
+  main {
+    width: 100%;
+    padding: 10vh 2% 10vh;
+  }
+}
+main .hero, main .hero--mobile {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  margin: 2rem 0;
+}
+@media screen and (max-width: 768px) {
+  main .hero, main .hero--mobile {
+    display: none;
+  }
+}
+main .hero .carousel, main .hero--mobile .carousel, main .hero--mobile .carousel--mobile {
+  height: 100%;
+  height: auto;
+  display: flex;
+  transition: transform 0.5s ease;
+}
+main .hero button.prev, main .hero--mobile button.prev,
+main .hero button.next,
+main .hero--mobile button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+main .hero button.prev, main .hero--mobile button.prev {
+  left: 0;
+}
+main .hero button.next, main .hero--mobile button.next {
+  right: 0;
+}
+main .hero .more, main .hero--mobile .more {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+main .hero .dots, main .hero--mobile .dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .hero .dot, main .hero--mobile .dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+main .hero .dot.active, main .hero--mobile .dot.active {
+  background-color: white;
+}
+main .hero img, main .hero--mobile img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .hero button, main .hero--mobile button {
+  position: absolute;
+  bottom: 10%;
+  padding: 1rem 2rem;
+  background-color: #00cc44;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+main .hero button:hover, main .hero--mobile button:hover {
+  background-color: #009933;
+}
+@media screen and (max-width: 768px) {
+  main .hero--mobile {
+    display: flex;
+  }
+}
+main .categories, main .products {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0;
+  margin: auto;
+}
+@media screen and (max-width: 768px) {
+  main .categories, main .products {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+main .categories .category, main .categories .category--box, main .categories .product, main .products .category, main .products .category--box, main .products .product {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  main .categories .category, main .categories .category--box, main .categories .product, main .products .category, main .products .category--box, main .products .product {
+    width: 50%;
+  }
+}
+main .categories .category img, main .categories .category--box img, main .categories .product img, main .products .category img, main .products .category--box img, main .products .product img {
+  width: 95%;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+@media screen and (max-width: 768px) {
+  main .categories .category img, main .categories .category--box img, main .categories .product img, main .products .category img, main .products .category--box img, main .products .product img {
+    width: calc(100% - 10px);
+    padding-bottom: 10px;
+  }
+}
+main .categories .category:hover::after, main .categories .category--box:hover::after, main .categories .product:hover::after, main .products .category:hover::after, main .products .category--box:hover::after, main .products .product:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 0.5s;
+  z-index: 1;
+  pointer-events: none;
+}
+main .categories .category--box, main .products .category--box {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  font-style: normal;
+  width: 40%;
+  height: 5%;
+  border: 1.5px solid black;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  main .categories .category--box, main .products .category--box {
+    font-size: clamp 0.8rem, 1vw, 1.2rem;
+  }
+}
+main .categories .category--box:hover, .category--box:hover main .categories .category--box, main .products .category--box:hover, .category--box:hover main .products .category--box {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
+main .categories--button {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+  margin: auto;
+}
+@media screen and (max-width: 768px) {
+  main .categories--button {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+main .categories--button .category--box {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  font-style: normal;
+  text-align: center;
+  width: 40%;
+  height: 5%;
+  border: 1.5px solid black;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  main .categories--button .category--box {
+    font-size: clamp 0.8rem, 1vw, 1.2rem;
+  }
+}
+main .categories--button .category--box:hover, .category--box:hover main .categories--button .category--box {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  transition: background-color 0.3s;
+}/*# sourceMappingURL=main.css.map */
